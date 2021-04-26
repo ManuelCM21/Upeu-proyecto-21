@@ -1,12 +1,11 @@
 *.replit
-*.class
 **/*
+!**/*.cpp
+!**/*.dart
 !**/*.go
 !**/*.java
+!**/*.kt
 !**/*.py
 !**/*.rb
-!**/*.cpp
-!**/*.kt
-!**/*.dart
 !**/*.scala
 !**/
