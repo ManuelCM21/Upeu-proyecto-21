@@ -107,9 +107,9 @@ public class Ejercicios7_10 {
     }
 
     public static void main(String[] args) {
-        //Ejercicio7();
-        //Ejercicio8();
+        Ejercicio7();
+        Ejercicio8();
         Ejercicio9();
-        //Ejercicio10();
+        Ejercicio10();
     }
 }
