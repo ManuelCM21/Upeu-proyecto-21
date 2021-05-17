@@ -62,25 +62,25 @@ public class Ejercicios7_10 {
     public static void Ejercicio9() {
         System.out.println("--> EJERCICIO 4.10 <--");
         //Definir variables
-        int n, a;
-        double x, e, f, c;
+        int num, contador;
+        double valx, total, fac, c;
         //Datos de entrada
         System.out.print("Ingrese las repeticiones de la serie: ");
-        n=teclado.nextInt();
+        num=teclado.nextInt();
         System.out.print("Ingrese el valor de x: ");
-        x=teclado.nextDouble();
-        e=0;
+        valx=teclado.nextDouble();
+        total=0;
         //Proceso
-        for (a=1; a<=n; a++){
+        for (contador=1; contador<=num; contador++){
             c=1;
-            f=1;
-            while (c<=a){
-                f=f*c;
+            fac=1;
+            while (c<=contador){
+                fac=fac*c;
                 c=c+1;
             }
-            e=e+(x*a)/f;
+            total=total+(valx*contador)/fac;
         }
-        System.out.println("El resultado final de la serie es: "+e);
+        System.out.println("El resultado final de la serie es: "+total);
     }
 
     public static void Ejercicio10() {
@@ -109,7 +109,7 @@ public class Ejercicios7_10 {
     public static void main(String[] args) {
         //Ejercicio7();
         //Ejercicio8();
-        //Ejercicio9();
-        Ejercicio10();
+        Ejercicio9();
+        //Ejercicio10();
     }
 }

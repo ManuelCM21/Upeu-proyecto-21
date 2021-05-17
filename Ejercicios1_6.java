@@ -19,23 +19,25 @@ public class Ejercicios1_6 {
     public static void Ejercicio2() {
         //Definir variables y otros
         System.out.println("--> EJERCICIO 4.2 <--");
-        char tipo;
+        char tipo, pago;
         double cant=0;
         double total=0;
         //Datos de entrada
         System.out.print("Ingrese el tipo de amburguesa\n\tS = Simple\n\tD = Doble\n\tT = Triple : ");
         tipo=teclado.next().charAt(0);
+        System.out.print("Ingrese el tipo de pago\n\t1 = Efectivo\n\t2 = Tarjeta de Credito :");
+        pago=teclado.next().charAt(0);
         System.out.print("Ingrese la cantidad de amburguesas: ");
         cant=teclado.nextDouble();
         //Proceso
-        switch(tipo){
-            case 'S':{ total=(21*cant);
-            } break;
-            case 'D':{ total=(26.25*cant);
-            } break;
-            case 'T':{ total=(29.4*cant);
-            } break;
-        }
+        switch(tipo & pago){
+            case 'S' & '2':{ total=(21*cant);} break;
+            case 'D' & '2':{ total=(26.25*cant);} break;
+            case 'T' & '2':{ total=(29.4*cant);} break;}
+        switch(tipo & pago){
+            case 'S' & '1':{ total=(20*cant);} break;
+            case 'D' & '1':{ total=(25*cant);} break;
+            case 'T' & '1':{ total=(28*cant);} break;}
         //Datos de salida
         System.out.println("El monto a pagar es: "+total);
         System.out.println("\n");
@@ -146,11 +148,11 @@ public class Ejercicios1_6 {
     }
 
     public static void main(String[] args) {
-        Ejercicio1();
+        //Ejercicio1();
         Ejercicio2();
-        Ejercicio3();
-        Ejercicio4();
-        Ejercicio5();
-        Ejercicio6();
+        //Ejercicio3();
+        //Ejercicio4();
+        //Ejercicio5();
+        //Ejercicio6();
     }
 }

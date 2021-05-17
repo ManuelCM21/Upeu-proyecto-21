@@ -65,11 +65,11 @@ public class StrRepetitive {
     }
 
     public static void numeroFibonaci() {
-        int numAnt=0, numNue=1, numTem=0, numcontador=1;
+        int numAnt=0, numNue=1, numTem=0, contador=1;
         System.out.println("Ejercicio Fibonaci");
         int numFinal=teclado.nextInt();
         while (contador<numFinal) {
-            numTem=numNue
+            numTem=numNue+numFinal
         }
     }
 
