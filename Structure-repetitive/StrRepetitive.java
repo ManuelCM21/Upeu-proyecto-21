@@ -69,18 +69,23 @@ public class StrRepetitive {
         System.out.println("Ejercicio Fibonaci");
         int numFinal=teclado.nextInt();
         while (contador<numFinal) {
-            numTem=numNue+numAnt;
-            
+            numTem=numNue;
+        numNue=numAnt+numNue;
+        numAnt=numTem;     
+        contador++;
+        //System.out.println("El numero Fibonci es:"+numNue);
+      }
+        System.out.println("Numero fibonaci de "+numFinal+" es: "+numNue);
         }
-    }
 
     public static void main(String[] args) {
        /* System.out.println("Hola");
         saludo();
         name5(); */
         //suma10NumerosMientras();
-        //suma10NumerosHacerMientras();
-        //suma10NumerosParaHasta();
+        suma10NumerosHacerMientras();
+        suma10NumerosParaHasta();
         numerospareshasta100();
+        numeroFibonaci();
     }
 }
