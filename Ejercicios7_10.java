@@ -24,7 +24,7 @@ public class Ejercicios7_10 {
                 descuento=precio*0.12;
             } else if (precio<100){
                 descuento=precio*0.10;}
-            System.out.println("El precio ddel articulo con descuento es: $"+(precio-descuento));
+            System.out.println("El precio del articulo con descuento es: $"+(precio-descuento));
             System.out.println("El descuento aplicado es: $"+descuento);
             total=total+(precio-descuento);
             n=n-1;
