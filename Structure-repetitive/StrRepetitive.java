@@ -69,7 +69,8 @@ public class StrRepetitive {
         System.out.println("Ejercicio Fibonaci");
         int numFinal=teclado.nextInt();
         while (contador<numFinal) {
-            numTem=numNue+numFinal
+            numTem=numNue+numAnt;
+            
         }
     }
 
