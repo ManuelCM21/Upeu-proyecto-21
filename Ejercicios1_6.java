@@ -85,12 +85,9 @@ public class Ejercicios1_6 {
                 if (color<1||color>3)
                     System.out.print("Valor incorrecto. Ingrese nuevamente: ");
             } while (color<1||color>3);
-            if(color==1){
-                verde=verde+1;}
-            if(color==2){
-                blanco=blanco+1;}
-            if(color==3){
-                rojo=rojo+1;}
+            if(color==1){verde=verde+1;}
+            if(color==2){blanco=blanco+1;}
+            if(color==3){rojo=rojo+1;}
             System.out.println();
         }
         System.out.println("Valor de focos verdes: " +verde);
@@ -152,8 +149,8 @@ public class Ejercicios1_6 {
         //Ejercicio1();
         //Ejercicio2();
         //Ejercicio3();
-        //Ejercicio4();
+        Ejercicio4();
         //Ejercicio5();
-        Ejercicio6();
+        //Ejercicio6();
     }
 }
