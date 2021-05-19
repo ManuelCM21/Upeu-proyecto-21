@@ -54,12 +54,9 @@ public class Ejercicios1_6 {
             System.out.print("\tDame un numero: ");
             n=teclado.nextInt();
             teclado.nextLine();
-            if (n==0) {
-                igual=igual+ 1;}
-            if (n>0) {
-                mayor=mayor+ 1;}
-            if (n<0) {
-                menor=menor+ 1;}
+            if (n==0) {igual=igual+ 1;}
+            if (n>0) {mayor=mayor+ 1;}
+            if (n<0) {menor=menor+ 1;}
         }
         //Datos de salida
         System.out.println("La cantidad de numeros que son 0 es: "+igual);
@@ -146,11 +143,11 @@ public class Ejercicios1_6 {
     }
 
     public static void main(String[] args) {
-        //Ejercicio1();
-        //Ejercicio2();
-        //Ejercicio3();
+        Ejercicio1();
+        Ejercicio2();
+        Ejercicio3();
         Ejercicio4();
-        //Ejercicio5();
-        //Ejercicio6();
+        Ejercicio5();
+        Ejercicio6();
     }
 }
