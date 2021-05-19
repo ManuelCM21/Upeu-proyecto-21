@@ -139,20 +139,21 @@ public class Ejercicios1_6 {
         in=teclado.nextInt();
         System.out.print("Ingrese el valor final: ");
         fin=teclado.nextInt();
-        for (x=in; x<=fin ; x++) {
+        while (x==in || x<=fin) {
             System.out.println(" "+x);
             System.out.println("Su salario al cabo de 6años es:"+(a*c+d*c));
             System.out.println("Su salario por cada año es:"+(a+d));
+            x=x+1;
         }
         System.out.println("\n");
     }
 
     public static void main(String[] args) {
-        Ejercicio1();
-        Ejercicio2();
-        Ejercicio3();
-        Ejercicio4();
-        Ejercicio5();
+        //Ejercicio1();
+        //Ejercicio2();
+        //Ejercicio3();
+        //Ejercicio4();
+        //Ejercicio5();
         Ejercicio6();
     }
 }
