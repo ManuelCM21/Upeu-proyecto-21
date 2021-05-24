@@ -1,12 +1,11 @@
 package CLASSMATE;
-
 import java.util.Scanner;
 
 public class Sesion_1 {
 static Scanner teclado=new Scanner(System.in);
 
     public static void sumanumerosconsecutivos() {
-        System.out.println("--> EJERCICIO 1 <--");
+        System.out.println("--> EJERCICIO 7 <--");
         //Definir variables
         int n, resultado=0;
         //Datos de entrada
@@ -19,7 +18,7 @@ static Scanner teclado=new Scanner(System.in);
     }
 
     public static void areadeuncirculo() {
-        System.out.println("--> EJERCICIO 2 <--");
+        System.out.println("--> EJERCICIO 8 <--");
         //Definir variables
         double pi=3.14, radio, area;
         //Datos de entrada
@@ -32,7 +31,7 @@ static Scanner teclado=new Scanner(System.in);
     }
 
     public static void preciodelarticulo() {
-        System.out.println("--> EJERCICIO 3 <--");
+        System.out.println("--> EJERCICIO 9 <--");
         //Definir variables
         int precio;
         double dcto=0.2, IVA=0.15, costo1, preciofinal;
