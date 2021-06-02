@@ -1,7 +1,7 @@
 //import pe.edu.upeu.OperacionesMat;
 //import pe.edu.upeu.SubProgramas;
 //import pe.edu.upeu.recurs.FactorialRecur;
-import pe.edu.upeu.recurs.Fibonaci;
+import pe.edu.upeu.recursi.Fibonaci;
 import pe.edu.upeu.util.Teclado;
 
 public class App {
