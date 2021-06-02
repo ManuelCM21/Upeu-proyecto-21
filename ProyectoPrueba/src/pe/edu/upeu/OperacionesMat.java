@@ -58,7 +58,7 @@ public class OperacionesMat {
             }        
             System.out.println("El resultado de la operacion "+operador+" es:"+resultado);                   
         } catch (Exception e) {
-            System.out.println("Error en la ejecucion...intente nuevamente!");
+            System.out.println("Error en la ejecucion....intente nuevamente!");
             operacionesBasicas();
         }
     }
