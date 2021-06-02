@@ -32,6 +32,6 @@ public class SubProgramas {
                 fx=fx+(potencia(x,i)/factorial(i)); 
             }
         }
-        System.out.println("La funcion exponencial de e^x es: "+fx);
+        System.out.println("La función exponencial de e^x es: "+fx);
     }
 }
