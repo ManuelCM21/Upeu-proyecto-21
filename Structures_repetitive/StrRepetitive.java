@@ -1,3 +1,4 @@
+package Structures_repetitive;
 import java.util.Scanner;
 
 /*
