@@ -32,7 +32,6 @@ public class UtilsX {
         catch (final Exception e){
            System.out.println("Error: "+e.getMessage());
         }
-       System.out.println("------------------------------------------------"); 
     } 
 
     public final void clearConsole3(){
