@@ -40,13 +40,13 @@ public class App {
         do{
             switch(opcion){
                 case 1: ut.clearConsole();dao.crearCategoria();break;
-                case 12: ut.clearConsoleScreen();dao.reporteCategoria(); break;
-                case 2: ut.clearConsoleScreen();daoPro.crearProducto(); break;
-                case 21: ut.clearConsoleScreen();daoPro.reportarProducto(); break;
-                case 3: ut.clearConsoleScreen();venDO.ventaGeneral();break;
-                case 31: ut.clearConsoleScreen();venDO.reporteVentasRangoFecha();break;
+                case 12: ut.clearConsole();dao.reporteCategoria(); break;
+                case 2: ut.clearConsole();daoPro.crearProducto(); break;
+                case 21: ut.clearConsole();daoPro.reportarProducto(); break;
+                case 3: ut.clearConsole();venDO.ventaGeneral();break;
+                case 31: ut.clearConsole();venDO.reporteVentasRangoFecha();break;
                 case 4: daoUso=new UsuarioDao();daoUso.crearNuevoUsuario();break;
-                default: ut.clearConsoleScreen();
+                default: ut.clearConsole();
                 System.out.println("La opcion que eligio no existe!"); break;
             }
             if(opcion!=0){
@@ -54,7 +54,7 @@ public class App {
             opcion=lt.leer(0, mensaje);}
         }while(opcion!=0); 
         if (opcion==0) {
-            ut.clearConsoleScreen();
+            ut.clearConsole();
         }    
     }
 
