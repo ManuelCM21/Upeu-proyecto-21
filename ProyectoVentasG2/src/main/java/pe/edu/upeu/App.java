@@ -1,33 +1,81 @@
 package pe.edu.upeu;
 
-import pe.edu.upeu.gui.MainGUI;
+import java.io.Console;
+import pe.edu.upeu.dao.CategoriaDao;
+import pe.edu.upeu.dao.ProductoDao;
+import pe.edu.upeu.dao.UsuarioDao;
+import pe.edu.upeu.dao.VentaDao;
+//import pe.edu.upeu.gui.MainGUI;
 import pe.edu.upeu.modelo.CategoriaTO;
 //import pe.edu.upeu.modelo.ProductoTO;
 import pe.edu.upeu.util.LeerTeclado;
+import pe.edu.upeu.util.UtilsX;
 
-/**
- * Hello world!
- *
- */
+
 public class App {
 
     public static void registrarCategoria(CategoriaTO categ) {
         System.out.println("--------------Registro de Categoria de Productos--------------");
         System.out.println("idCateg:"+categ.getIdCateg()+"\tNombre:"+categ.getNombre());
-    }   
+    } 
+    
+    public static void menuMain(){
+        String mensaje="Seleccion el algoritmo que desea ejecutar"+
+        "\n\t1  = Registrar Categoria"+
+        "\n\t12 = Reportar Categoria"+
+        "\n\t2  = Registrar Producto"+
+        "\n\t21 = Reportar Producto"+
+        "\n\t3  = Realizar Venta"+
+        "\n\t31  = Reporte de Ventas en un rango"+
+        "\n\t4  = Registrar Usuario"+
+        "\n\t0  = Salir del programa : ";
+        LeerTeclado lt = new LeerTeclado();
+        CategoriaDao dao = new CategoriaDao();
+        UtilsX ut = new UtilsX();
+        UsuarioDao daoUso = new UsuarioDao();
+        VentaDao venDO = new VentaDao();
+        ProductoDao daoPro = new ProductoDao();
+        int opcion=0;
+        opcion=lt.leer(0, mensaje);
+        do{
+            switch(opcion){
+                case 1: ut.clearConsoleScreen();dao.crearCategoria();break;
+                case 12: ut.clearConsoleScreen();dao.reporteCategoria(); break;
+                case 2: ut.clearConsoleScreen();daoPro.crearProducto(); break;
+                case 21: ut.clearConsoleScreen();daoPro.reportarProducto(); break;
+                case 3: ut.clearConsoleScreen();venDO.ventaGeneral();break;
+                case 31: ut.clearConsoleScreen();venDO.reporteVentasRangoFecha();break;
+                case 4: daoUso=new UsuarioDao();daoUso.crearNuevoUsuario();break;
+                default: ut.clearConsoleScreen();
+                System.out.println("La opcion que eligio no existe!"); break;
+            }
+            if(opcion!=0){
+            System.out.println("\n¿Desea seguir probando?");
+            opcion=lt.leer(0, mensaje);}
+        }while(opcion!=0); 
+        if (opcion==0) {
+            ut.clearConsoleScreen();
+        }    
+    }
+
+    public static void validarAcceso() {
+        LeerTeclado lt = new LeerTeclado();
+        Console cons = System.console();
+        String usuario = (lt.leer("", "INGRESE SU USUARIO: ")).toUpperCase();
+        System.out.print("INGRESE SU CLAVE: ");
+        char[] clave = cons.readPassword();
+        UsuarioDao usuDao = new UsuarioDao();
+        if (usuDao.login(usuario, clave)) {
+            menuMain();
+        }else {
+            System.out.println("Intente nuevamente...");
+            validarAcceso();
+        }
+
+    }
 
     public static void main( String[] args ){
-        System.out.println( "Hello World!" );
-        LeerTeclado lt = new LeerTeclado();
-        CategoriaTO ca = new CategoriaTO();
-        
-        ca.setIdCateg(lt.leer("", "Ingrese el id Categoria"));
-        ca.setNombre(lt.leer("", "Ingrese el nombre Categoria"));
-        registrarCategoria(ca);
-
-        //ProductoTO pto = new ProductoTO();
-        //pto.setIdProducto(lt.leer("", "Ingrese el nombre producto"));
-
-        new MainGUI();
+        validarAcceso();
+        //menuMain();
     }
 }

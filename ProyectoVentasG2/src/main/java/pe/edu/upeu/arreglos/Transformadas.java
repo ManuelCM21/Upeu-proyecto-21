@@ -89,6 +89,64 @@ public class Transformadas {
         System.out.println("");
     }
 
+    public void imprimirContenidomatrizCadena(String [][] matriz) {
+        for (int i = 0; i < matriz.length; i++){
+            for (int j = 0; j < matriz[0].length; j++){
+                if(matriz[i][j]!=null && !matriz[i][j].equals("")){
+                    System.out.print(matriz[i][j]+"\t");
+                }else{
+                    System.out.print("\t");
+                }  
+            }
+            System.out.println("");
+        }
+    }
+
+    public String [][] transformada05(int dimension, int valorinicial) {
+        String[][] matriz = new String[dimension][dimension];
+        for (int i = 0; i < matriz.length; i++){
+            for (int j = 0; j <= i; j++) {
+                matriz[i][(dimension-1)-j] = ""+valorinicial;
+                valorinicial++;
+            }
+        }
+        return matriz;
+    }
+
+    public void transformada12(int dimension, int valorinicial) {
+        System.out.println("");
+        String[][] matriz = new String[dimension][dimension];
+        for (int i = 0; i < matriz.length; i++){
+            for (int j = 0; j <= (dimension-1)-i; j++) {
+                matriz[i][(dimension-1)-j] = ""+valorinicial;
+                valorinicial++;
+            }
+        }
+        Transformadas tm = new Transformadas();
+        tm.imprimirContenidomatrizCadena(matriz);
+        System.out.println("");
+    }
+
+    public void transformada21(int dimension, int valorinicial) {
+        String[][] matriz = new String[dimension][dimension];
+        for (int j = 0; j < matriz[0].length; j++){
+            if (j%2==0) {
+                for (int i = 0; i < matriz.length; i++) {
+                    matriz[i][j] = ""+valorinicial;
+                    valorinicial ++;
+                }
+            } else {
+                for (int i = matriz.length-1; i >= 0; i--) {
+                    matriz[i][j] = ""+valorinicial;
+                    valorinicial ++;
+                }
+            }
+        }
+        Transformadas tm = new Transformadas();
+        tm.imprimirContenidomatrizCadena(matriz);
+        System.out.println("");
+    }
+
     public static void main(String[] args) {
         Transformadas tm = new Transformadas();
 
@@ -96,5 +154,8 @@ public class Transformadas {
         tm.transformada02(5, 0);
         tm.transformada03(5, 0);
         tm.transformada04(5, 0);
+        tm.imprimirContenidomatrizCadena(tm.transformada05(5, 0));
+        tm.transformada12(5, 0);
+        tm.transformada21(5, 0);
     }
 }
