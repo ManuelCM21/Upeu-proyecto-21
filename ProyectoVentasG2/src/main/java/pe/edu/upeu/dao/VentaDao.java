@@ -130,7 +130,7 @@ public class VentaDao extends AppCrud {
             }
         ut.clearConsole3();
         ut.pintarLine1('H',13);
-        System.out.print(ansi().render(" -"+"@|green REPORTE DE VENTAS POR FECHA |@"+"-"));ut.pintarLine('H',13);
+        System.out.print(ansi().render("-"+"@|green REPORTE DE VENTAS POR FECHA |@"+"-"));ut.pintarLine('H',13);
         ut.pintarLine1('H',13);
         System.out.print(ansi().fg(GREEN).a(" Entre "+fechaIni+" a "+fechaFin+" ").reset());ut.pintarLine('H',13);
         ut.pintarLine('H',42);
