@@ -39,7 +39,7 @@ public class App {
         opcion=lt.leer(0, mensaje);
         do{
             switch(opcion){
-                case 1: ut.clearConsoleScreen();dao.crearCategoria();break;
+                case 1: ut.clearConsole();dao.crearCategoria();break;
                 case 12: ut.clearConsoleScreen();dao.reporteCategoria(); break;
                 case 2: ut.clearConsoleScreen();daoPro.crearProducto(); break;
                 case 21: ut.clearConsoleScreen();daoPro.reportarProducto(); break;

@@ -19,7 +19,7 @@ public class UtilsX {
     return null;
     }
 
- /*   public final void clearConsole(){
+    public final void clearConsole(){
         try{            
             final String os = System.getProperty("os.name");    
             if (os.contains("Windows")){
@@ -33,7 +33,7 @@ public class UtilsX {
            System.out.println("Error: "+e.getMessage());
         }
        System.out.println("------------------------------------------------"); 
-    }  */
+    } 
 
     public final void clearConsole3(){
         try{            
